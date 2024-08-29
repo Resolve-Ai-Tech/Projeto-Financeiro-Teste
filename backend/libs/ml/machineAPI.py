@@ -4,6 +4,9 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.neural_network import MLPClassifier
 from sklearn.metrics import classification_report, accuracy_score
 
+class Machine():
+    pass
+
 iris = load_iris()
 X = iris.data
 y = iris.target
@@ -19,5 +22,6 @@ mlp.fit(X_train, y_train)
 
 y_pred = mlp.predict(X_test)
 
-print("Accuracy:", accuracy_score(y_test, y_pred))
-print("Classification Report:\n", classification_report(y_test, y_pred))
+if __name__ == '__main__':
+    print("Accuracy:", accuracy_score(y_test, y_pred))
+    print("Classification Report:\n", classification_report(y_test, y_pred))
